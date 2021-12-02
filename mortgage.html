@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Financial Literacy Application/Project</title>
+<!-- Style -->
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+    <link href="./styleicon.css" rel="stylesheet" type="text/css"/>
+<!-- Scripts     -->
+    <script src="./script.js"></script>
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">   
+<!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">    
+  </head>
+<!-- Initial Setup Script -->
+
+  <script type="text/javascript">
+        var PageCurrent = 6;
+  </script>
+<body onload = "checkPage (PageCurrent)">
+  <div class = "Top-Navigation" style = "border: 1px solid black; display: flex; flex-direction:row;">
+    <div class = "homeButton" onclick="location.href='./index.html';" style = "cursor: pointer; color: #ECEFF1; background-color: #26A69A;">
+      JQFL
+    </div>
+    <div class = "main-nav">
+      <div class = "dropdown">
+        <div class = "dropdownbutton">Chapters</div>
+        <div class = "dropdown-content">
+          <div><a href="./chapter1.html">Chapter 01</a></div>
+          <div><a href="./chapter2.html">Chapter 02</a></div>
+          <div><a href="./chapter3.html">Chapter 03</a></div>
+          <div><a href="./chapter4.html">Chapter 04</a></div>
+          <div><a href="./chapter5.html">Chapter 05</a></div>
+        </div>
+      </div>
+    </div>
+    <div class = "main-nav" onclick="location.href='./investing.html';" style = "cursor: pointer;">Investors Hub</div>
+    <div class = "main-nav" onclick="location.href='./mortgage.html';" style = "cursor: pointer;">Mortgage Calculator Hub</div>  
+    <div class = "main-nav" onclick="location.href='./article.html';" style = "cursor: pointer;">A lazy article</div>  
+    
+    <div class = "mobile-nav" style = "margin-left:auto; padding: 0px; width: 40px;">
+      <div onclick ="unlock()" style="font-size: 30px; margin-right:5px;"> ≡ </div>    
+    </div>
+  </div>
+
+<div class = 'flex-nav-column' style="display:none; visibility:hidden;  flex-direction: column;  ">
+  <div onclick = "location.href='./index.html';" style = "cursor: pointer;">Home</a></div>
+  <div onclick = "location.href='./chapter1.html';" style = "cursor: pointer;">Chapter 01</a></div>
+  <div onclick = "location.href='./chapter2.html';" style = "cursor: pointer;">Chapter 02</a></div>
+  <div onclick = "location.href='./chapter3.html';" style = "cursor: pointer;">Chapter 03</a></div>
+  <div onclick = "location.href='./chapter4.html';" style = "cursor: pointer;">Chapter 04</a></div>
+  <div onclick = "location.href='./chapter5.html';" style = "cursor: pointer;">Chapter 05</a></div>
+  <div onclick = "location.href='./investing.html';" style = "cursor: pointer;">Investors Hub</a></div>
+  <div onclick = "location.href='./mortgage.html';" style = "cursor: pointer;">Mortgage Calculator</a></div>
+  <div onclick = "location.href='./article.html';" style = "cursor: pointer;">A lazy article</a></div>
+</div>
+
+  <div id = "HeroImage2">
+    <div id = "HeroText2">
+      <section class = "HomeSection">
+        <table style = "width:100%">
+          <tr>
+            <td style = "width: 0px; margin: 0px 0px; padding: 0px 0px; ">
+              <p id = "LeftContent" hidden></p>
+              <ol hidden>
+                <li><a href="" id = "Page01"></a></li>
+                <li><a href="" id = "Page02"></a></li>
+                <li><a href="" id = "Page03"></a></li>
+                <li><a href="" id = "Page04"></a></li>
+                <li><a href="" id = "Page05"></a></li>
+              </ol>
+            </td>
+            <td>
+              <p id = "RightContent" ></p>
+              <form oninput="MortgageAmount.value = MortgagePayment_c(AnnualRate.value/100/12,NumYears.value*12,LoanAmount.value)">
+                <label for="AnnualRate">Annual Interest Rate (%):</label><br>
+                <input type="number" id="AnnualRate" name="AnnualRate">
+                <br>
+
+                <label for="NumYears">Number of Years: </label><br>
+                <input type="number" id="NumYears" name="NumYears">
+                <br>
+
+                <label for="LoanAmount">Loan Amount:</label><br>
+                <input type="number" id="LoanAmount" name="LoanAmount">
+                <br>
+                <p id = "MortgageOutput"></p>
+                <div style="height: 50px;">
+                  <output id="MortgageAmount" name="MortgageAmount"></output>
+                </div>
+              </form>
+              <!-- <button id = "ResetContent" type = "reset">Reset</button>   -->
+            </td>        
+          </tr>
+        </table>
+        <nav class = "BottomNav">
+        <ul hidden>
+          <li><a href="#" id="PagePreviousLink"> Previous Chapter </a></li>
+          <li><a href="#" id="PageNextLink"> Next Chapter </a></li>
+        </ul>
+        </nav>
+      </section>
+    </div>
+  </div>
+
+
+  <!-- This section is used for final information --->
+  <!-- <footer>
+    list of home page, chapter 1, chapter 2, chapter 3, chapter 4
+  </footer> -->
+
+</body>
+<>

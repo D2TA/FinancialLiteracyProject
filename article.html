@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Financial Literacy Application/Project</title>
+<!-- Style -->
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+    <link href="./styleicon.css" rel="stylesheet" type="text/css"/>
+    <link href="./styleinvest.css" rel="stylesheet" type="text/css"/>
+<!-- Scripts     -->
+    <script src="./script.js"></script>
+    <script src="./scriptinvest.js"></script>    
+    <script src='./scriptarticle.js'></script>
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Comic+Neue:wght@300&family=Libre+Barcode+39+Text&family=Open+Sans:wght@300&family=Oswald:wght@200&family=Press+Start+2P&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+<!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">    
+  </head>
+<!-- Google Charts API -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!-- Initial Setup Script -->
+
+  <script type="text/javascript">
+  </script>
+<body onload = "article();" style="background-color: #121212; color: white; ">
+  <div class = "Top-Navigation" style = "border: 1px solid black; display: flex; flex-direction:row;">
+    <div class = "homeButton" onclick="location.href='./index.html';" style = "cursor: pointer; color: #ECEFF1; background-color: #26A69A;">
+      JQFL
+    </div>
+    <div class = "main-nav">
+      <div class = "dropdown">
+        <div class = "dropdownbutton">Chapters</div>
+        <div class = "dropdown-content">
+          <div><a href="./chapter1.html">Chapter 01</a></div>
+          <div><a href="./chapter2.html">Chapter 02</a></div>
+          <div><a href="./chapter3.html">Chapter 03</a></div>
+          <div><a href="./chapter4.html">Chapter 04</a></div>
+          <div><a href="./chapter5.html">Chapter 05</a></div>
+        </div>
+      </div>
+    </div>
+    <div class = "main-nav" onclick="location.href='./investing.html';" style = "cursor: pointer;">Investors Hub</div>
+    <div class = "main-nav" onclick="location.href='./mortgage.html';" style = "cursor: pointer;">Mortgage Calculator Hub</div>  
+    <div class = "main-nav" onclick="location.href='./article.html';" style = "cursor: pointer;">A lazy article</div>  
+    
+    <div class = "mobile-nav" style = "margin-left:auto; padding: 0px; width: 40px;">
+      <div onclick ="unlock()" style="font-size: 30px; margin-right:5px;"> ≡ </div>    
+    </div>
+  </div>
+
+<div class = 'flex-nav-column' style="display:none; visibility:hidden;  flex-direction: column;  ">
+  <div onclick = "location.href='./index.html';" style = "cursor: pointer;">Home</a></div>
+  <div onclick = "location.href='./chapter1.html';" style = "cursor: pointer;">Chapter 01</a></div>
+  <div onclick = "location.href='./chapter2.html';" style = "cursor: pointer;">Chapter 02</a></div>
+  <div onclick = "location.href='./chapter3.html';" style = "cursor: pointer;">Chapter 03</a></div>
+  <div onclick = "location.href='./chapter4.html';" style = "cursor: pointer;">Chapter 04</a></div>
+  <div onclick = "location.href='./chapter5.html';" style = "cursor: pointer;">Chapter 05</a></div>
+  <div onclick = "location.href='./investing.html';" style = "cursor: pointer;">Investors Hub</a></div>
+  <div onclick = "location.href='./mortgage.html';" style = "cursor: pointer;">Mortgage Calculator</a></div>
+  <div onclick = "location.href='./article.html';" style = "cursor: pointer;">A lazy article</a></div>
+</div>
+
+<div>
+  This is a randomly generated article. it is random each time.
+  <br><br> The possible letters/symbols are <i>abcdefghijklmnopqrstuvwxyz !@#$%^&*()_+-={}[];:,./?~`</i>
+
+  <hr>
+</div>
+  <div id = 'articleTitle' style="word-wrap: break-word; font-size: 30px;"></div>
+  <div id = 'articleAuthor' style="word-wrap: break-word;"></div>
+  <div id = 'article' style="word-wrap: break-word;"></div>
+</body>
+</html>

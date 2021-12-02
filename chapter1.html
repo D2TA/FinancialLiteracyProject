@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Financial Literacy Application/Project</title>
+<!-- Style -->
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+    <link href="./styleicon.css" rel="stylesheet" type="text/css"/>
+<!-- Scripts     -->
+    <script src="./script.js"></script>
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">   
+<!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">    
+  </head>
+<!-- Initial Setup Script -->
+
+  <script type="text/javascript">
+        var PageCurrent = 1;        
+  </script>
+<body onload = "checkPage (PageCurrent)">
+  <div class = "Top-Navigation" style = "border: 1px solid black; display: flex; flex-direction:row;">
+    <div class = "homeButton" onclick="location.href='./index.html';" style = "cursor: pointer; color: #ECEFF1; background-color: #26A69A;">
+      JQFL
+    </div>
+    <div class = "main-nav">
+      <div class = "dropdown">
+        <div class = "dropdownbutton">Chapters</div>
+        <div class = "dropdown-content">
+          <div><a href="./chapter1.html">Chapter 01</a></div>
+          <div><a href="./chapter2.html">Chapter 02</a></div>
+          <div><a href="./chapter3.html">Chapter 03</a></div>
+          <div><a href="./chapter4.html">Chapter 04</a></div>
+          <div><a href="./chapter5.html">Chapter 05</a></div>
+        </div>
+      </div>
+    </div>
+    <div class = "main-nav" onclick="location.href='./investing.html';" style = "cursor: pointer;">Investors Hub</div>
+    <div class = "main-nav" onclick="location.href='./mortgage.html';" style = "cursor: pointer;">Mortgage Calculator Hub</div>  
+    <div class = "main-nav" onclick="location.href='./article.html';" style = "cursor: pointer;">A lazy article</div>  
+    
+    <div class = "mobile-nav" style = "margin-left:auto; padding: 0px; width: 40px;">
+      <div onclick ="unlock()" style="font-size: 30px; margin-right:5px;"> ≡ </div>    
+    </div>
+  </div>
+
+<div class = 'flex-nav-column' style="display:none; visibility:hidden;  flex-direction: column;  ">
+  <div onclick = "location.href='./index.html';" style = "cursor: pointer;">Home</a></div>
+  <div onclick = "location.href='./chapter1.html';" style = "cursor: pointer;">Chapter 01</a></div>
+  <div onclick = "location.href='./chapter2.html';" style = "cursor: pointer;">Chapter 02</a></div>
+  <div onclick = "location.href='./chapter3.html';" style = "cursor: pointer;">Chapter 03</a></div>
+  <div onclick = "location.href='./chapter4.html';" style = "cursor: pointer;">Chapter 04</a></div>
+  <div onclick = "location.href='./chapter5.html';" style = "cursor: pointer;">Chapter 05</a></div>
+  <div onclick = "location.href='./investing.html';" style = "cursor: pointer;">Investors Hub</a></div>
+  <div onclick = "location.href='./mortgage.html';" style = "cursor: pointer;">Mortgage Calculator</a></div>
+  <div onclick = "location.href='./article.html';" style = "cursor: pointer;">A lazy article</a></div>
+</div>
+<!-- Transitions -->
+  <div class="flex-container-chapters">
+    <div>
+      <p id = "ChapterID"></p>          
+      <p id = "LeftContent"></p>
+    </div>
+    <div>
+          <p id = "RightContent"></p>
+          <form id = "Form01">
+            <p>Question 1: <br>Which account should you store savings to earn interest?</p>
+            <input type="radio" id="Q01A01"    name="Q01"  value="Chequing Account">  <label for="Q01A01">   Chequing Account  </label><br>
+            <input type="radio" id="Q01A02"    name="Q01"  value="Credit Card Account">      <label for="Q01A02"> Credit Card Account     </label><br>
+            <input type="radio" id="Q01A03"    name="Q01"  value="Savings Accounts">  <label for="Q01A03">   Savings Accounts   </label>
+
+            <p>Question 2: <br> What is budgeting? </p>
+            <input type="radio" id="Q02A11"     name="Q02"  value="LeftOver">         <label for="Q02A11">   Having money left over at the end of the month. </label><br>
+            <input type="radio" id="Q02A12"     name="Q02"  value="Plans">            <label for="Q02A12"> A plan made in advance regarding the expenditure of money based on available income.      </label><br>
+            <input type="radio" id="Q02A13"     name="Q02"  value="Bills">            <label for="Q02A13">   The ability to pay your bills on time.   </label> <br>
+            <input type="radio" id="Q02A13"     name="Q02"  value="Foods">            <label for="Q02A14">   Having enough money to go out to eat.   </label>
+
+            <p> Question 3: <br> Which of the following is an example of a '<a class="tooltip"><b><i>fixed expense</i></b><span class="tooltiptext"> <b>Fixed expenses</b> cost the same amount each month. These bills cannot easily be changed and are usually paid on a regular basis, such as weekly, monthly, quarterly or from year to year. <br><br> <b>Variable expenses</b> represent those daily spending decisions like eating at restaurants, buying clothes, and drinking Starbucks. They're "variable" because the amount that you spend differs from month to month.</span></a>'? </p>
+            <input type="radio" id="Q03A11"     name="Q03"  value="Foods">            <label for="Q03A11">   Food and groceries. </label><br>
+            <input type="radio" id="Q03A12"     name="Q03"  value="Mortgage">         <label for="Q03A12">   Mortgage or rent payments.     </label><br>
+            <input type="radio" id="Q03A13"     name="Q03"  value="Charity">          <label for="Q03A13">   Charitable contributions.   </label> <br>
+            <input type="radio" id="Q03A13"     name="Q03"  value="Gas">              <label for="Q03A14">   Gas for your car.   </label>
+
+            <br><br>
+            <input id = "Submit01" type="submit" onclick= "QuestionCheck(PageCurrent)">
+          </form>       
+    </div>
+  </div>
+  
+  <div class = "flex-bottom-nav">
+    <div><button style = "width: 100px;"> <a href="#" id="PagePreviousLink"> Previous Chapter </a> </button></div>
+    <div><button style = "width: 100px;"> <a href="#" id="PageNextLink"> Next Chapter </a> </button></div>    
+  </div>
+
+</body>
+<>
